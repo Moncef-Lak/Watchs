@@ -1,0 +1,557 @@
+.container .account {
+  width: 100%;
+  height: 100%;
+  padding: calc(var(--left-margin-3) - 2px);
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+  font-weight: 350;
+  font-size: 1.2vw;
+}
+
+.container .account .title {
+  font-size: 6vw;
+  margin-top: -15px;
+  padding: var(--left-margin-2) 0;
+  padding-left: var(--left-margin-2);
+  width: 100%;
+  line-height: calc(var(--left-margin-2) - 2px);
+  border-bottom: 2px solid var(--color-dark-black-10);
+}
+
+.container .account .big-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: var(--left-margin-2);
+  padding-bottom: 0;
+  position: relative;
+}
+
+.container .account .big-box .verify-email-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+  font-weight: 350;
+  font-size: 1.3vw;
+  margin: 50px 0;
+}
+
+.container .account .big-box .verify-email-message .message {
+  font-size: 2vw;
+}
+
+.container .account .big-box .verify-email-message .message-mini {
+  font-size: 1.3vw;
+  color: var(--color-light-white-5);
+  margin: 20px 0;
+}
+
+.container .account .big-box .verify-email-message .log-Out-message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container .account .big-box .verify-email-message .log-Out-message .message-mini-mini {
+  font-size: 1.5vw;
+  color: var(--color-light-red-3);
+  cursor: pointer;
+  width: max-content;
+  text-decoration: underline;
+}
+
+
+.container .account .big-box.big-box-column {
+  flex-direction: column;
+  padding-right: calc(var(--left-margin-2) * 2);
+}
+
+.container .account .big-box .login,
+.container .account .big-box .reg {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 45%;
+}
+
+.container .account .big-box .login .heading,
+.container .account .big-box .reg .heading {
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.container .account .big-box .login .login-box,
+.container .account .big-box .reg .reg-box {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-light-white-2);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container .account .big-box .login .login-box form .error-box,
+.container .account .big-box .reg .reg-box form .error-box {
+  width: 100%;
+  padding: 23px 30px;
+  margin-bottom: 30px;
+  font-size: 1vw;
+  background-color: var(--color-dark-red-1);
+  color: var(--color-light-red-3);
+  font-weight: 500;
+  display: none;
+}
+
+.container .account .big-box .login .login-box form .show-error-box,
+.container .account .big-box .reg .reg-box form .show-error-box {
+  display: block;
+}
+
+.container .account .big-box .reg .reg-box .media-account,
+.container .account .big-box .login .login-box .media-account {
+  width: 100%;
+  margin: 10px 0;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.container .account .big-box .reg .reg-box .media-account .media-box,
+.container .account .big-box .login .login-box .media-account .media-box {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 0 10px;
+  font-size: 2.5vw;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: .4s;
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+.container .account .big-box .reg .reg-box .media-account .media-box.facebook,
+.container .account .big-box .login .login-box .media-account .media-box.facebook {
+  background-color: #1461CC;
+}
+
+.container .account .big-box .reg .reg-box .media-account .media-box.facebook:hover,
+.container .account .big-box .login .login-box .media-account .media-box.facebook:hover {
+  background-color: transparent;
+  color: #1461CC;
+  border: #1461CC 2px solid;
+}
+
+.container .account .big-box .reg .reg-box .media-account .media-box.gmail,
+.container .account .big-box .login .login-box .media-account .media-box.gmail {
+  background-color: #d93025;
+
+}
+
+.container .account .big-box .reg .reg-box .media-account .media-box.gmail:hover,
+.container .account .big-box .login .login-box .media-account .media-box.gmail:hover {
+  background-color: transparent;
+  color: #d93025;
+  border: #d93025 2px solid;
+}
+
+.container .account .big-box .mini-title {
+  font-size: 1.4vw;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.container .account .big-box form {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .account .big-box form .input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.container .account .big-box form .input-box .label {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.4vw;
+}
+
+.container .account .big-box form .input-box input {
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  height: 4.5vw;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: solid 1px var(--color-dark-black-10);
+  transition: .3s ease-in-out;
+  font-size: 1.2vw;
+  color: var(--color-light-white-2);
+}
+
+.container .account .big-box form .input-box input:hover {
+  border: var(--color-light-white-2) solid 1px;
+
+}
+
+.container .account .big-box form .input-box input:focus {
+  outline: none;
+  border: var(--color-light-white-2) solid 1px;
+}
+
+.container .account .big-box form .input-box .hidden-show {
+  position: absolute;
+  inset: 0;
+  top: 60%;
+  z-index: 2;
+  left: 88%;
+  font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5vw;
+  width: 2vw;
+  cursor: pointer;
+}
+
+.container .account .big-box form .input-box .show {
+  color: var(--color-light-red-1);
+}
+
+.container .account .big-box form .input-box .validate {
+  font-size: .9vw;
+  color: var(--color-light-red-1);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-weight: 500;
+  position: absolute;
+  top: 100%;
+}
+
+.container .account .big-box form .input-box .validate .sym {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+}
+
+.container .account .big-box .profile .register-message .account-btn,
+.container .account .big-box .verify-email-message .account-btn,
+.container .account .big-box form .account-btn {
+  background-color: transparent;
+  border: none;
+  padding: 20px 0;
+  padding-top: 0;
+  width: max-content;
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-light-white-2);
+}
+
+.container .account .big-box .profile .register-message .account-btn .btn-prm,
+.container .account .big-box .verify-email-message .account-btn .btn-prm,
+.container .account .big-box form .account-btn .btn-prm {
+  font-size: 1.3vw;
+  margin: 10px 0px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-dark-black-8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+
+}
+
+.container .account .big-box .profile .register-message .account-btn .btn-prm .arrow-right,
+.container .account .big-box .verify-email-message .account-btn .btn-prm .arrow-right,
+.container .account .big-box form .account-btn .btn-prm .arrow-right {
+  font-size: 2.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  margin-left: 60px;
+  transition: .5s ease-in-out;
+
+}
+
+.container .account .big-box .profile .register-message .account-btn:hover .btn-prm .arrow-right,
+.container .account .big-box .verify-email-message .account-btn:hover .btn-prm .arrow-right,
+.container .account .big-box form .account-btn:hover .btn-prm .arrow-right {
+  margin-left: 100px;
+}
+
+.container .account .big-box .profile .register-message .account-btn .btn-prm:before,
+.container .account .big-box .verify-email-message .account-btn .btn-prm::before,
+.container .account .big-box form .account-btn .btn-prm:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 98%;
+  background-color: var(--color-light-white-2);
+  transition: .5s ease-in-out;
+  transform: translateX(-101%);
+}
+
+.container .account .big-box .profile .register-message .account-btn:hover .btn-prm:before,
+.container .account .big-box .verify-email-message .account-btn:hover .btn-prm::before,
+.container .account .big-box form .account-btn:hover .btn-prm:before {
+  transform: translateX(0);
+}
+
+.container .account .big-box .login .login-box form .mtps-srv {
+  font-size: 1vw;
+  cursor: pointer;
+  margin: 10px 0;
+  text-align: right;
+}
+
+
+/* ---------------------------------------------------- ---------------------------------------------------- */
+/* ---------------------------------------------------- ---------------------------------------------------- */
+/* ---------------------------------------------------- ---------------------------------------------------- */
+/* --------------------------------------------- Profile Style --------------------------------------------- */
+/* ---------------------------------------------------- ---------------------------------------------------- */
+/* ---------------------------------------------------- ---------------------------------------------------- */
+/* ---------------------------------------------------- ---------------------------------------------------- */
+
+.container .account .big-box .profile-nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  position: sticky;
+  inset: 0;
+}
+
+.container .account .big-box .profile-nav .link {
+  padding: 20px 5px;
+  font-size: 1vw;
+  width: 20%;
+  border: 1px solid var(--color-dark-black-10);
+  transition: .3s;
+  cursor: pointer;
+  color: var(--color-light-white-2);
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container .account .big-box .profile-nav .link.notif {
+  background-color: var(--color-light-red-2);
+  color: var(--color-light-white-2);
+}
+
+.container .account .big-box .profile-nav .link:hover {
+  background-color: var(--color-dark-black-10);
+}
+
+.container .account .big-box .profile-nav .link.active {
+  background-color: var(--color-light-white-2);
+  color: var(--color-dark-black-10);
+}
+
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+
+/* ------------------------------------------ 1024-start ------------------------------------------ */
+
+
+@media (max-width:1025px) {}
+
+/* ------------------------------------------ 1024-end ------------------------------------------ */
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .account {
+    padding: var(--left-margin-2) 0 0;
+  }
+
+  .container .account .title {
+    margin-top: 0;
+    font-size: 10vw;
+  }
+
+  .container .account .big-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .account .big-box .reg,
+  .container .account .big-box .login {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .container .account .big-box .login .heading,
+  .container .account .big-box .reg .heading {
+    font-size: 5vw;
+  }
+
+  .container .account .big-box form .input-box input {
+    height: 6.5vw;
+  }
+
+  .container .account .big-box form .input-box .hidden-show {
+    font-size: 2.5vw;
+    top: 65%;
+    left: 90%;
+  }
+
+  .container .account .big-box .profile .register-message .account-btn .btn-prm,
+  .container .account .big-box form .input-box .label,
+  .container .account .big-box form .input-box input,
+  .container .account .big-box .verify-email-message .account-btn .btn-prm,
+  .container .account .big-box form .account-btn .btn-prm {
+    font-size: 2.5vw;
+  }
+
+  .container .account .big-box .login .login-box form .mtps-srv,
+  .container .account .big-box .profile-nav .link {
+    font-size: 1.5vw;
+  }
+
+  .container .account .big-box.big-box-column {
+    padding: var(--left-margin-2);
+  }
+
+  .container .account .big-box .dashboard header{
+    font-size: 3vw;
+  }
+
+  .container .account .big-box .dashboard footer ,
+  .container .account .big-box .verify-email-message .message-mini {
+    font-size: 2vw;
+  }
+
+  .container .account{
+    padding-bottom:none ;
+  }
+  .container .account .big-box .verify-email-message .message {
+    font-size: 4vw;
+  }
+  .container .account .big-box .verify-email-message .log-Out-message .message-mini-mini{
+    font-size: 2.5vw;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  .container .account .big-box {
+    padding: var(--left-margin-2) 40px;
+  }
+
+  .container .account .big-box .reg,
+  .container .account .big-box .login {
+    width: 100%;
+  }
+
+  .container .account .title {
+    padding: 40px;
+  }
+
+  .container .account .big-box .login .heading,
+  .container .account .big-box .reg .heading {
+    font-size: 7vw;
+  }
+
+  .container .account .big-box form .input-box input {
+    height: 10vw;
+  }
+
+  .container .account .big-box form .input-box .hidden-show {
+    top: 65%;
+    left: 90%;
+    transform: scale(1.5);
+  }
+
+  .container .account .big-box .profile .register-message .account-btn .btn-prm,
+  .container .account .big-box form .input-box .label,
+  .container .account .big-box form .input-box input,
+  .container .account .big-box .verify-email-message .account-btn .btn-prm,
+  .container .account .big-box form .account-btn .btn-prm {
+    font-size: 4vw;
+  }
+
+  .container .account .big-box .profile .register-message .account-btn .btn-prm .arrow-right,
+  .container .account .big-box .verify-email-message .account-btn .btn-prm .arrow-right,
+  .container .account .big-box form .account-btn .btn-prm .arrow-right {
+    font-size: 6vw;
+  }
+
+  .container .account .big-box .login .login-box form .mtps-srv {
+    font-size: 2.5vw;
+  }
+
+  .container .account .big-box.big-box-column {
+    padding: var(--left-margin-2) 40px;
+  }
+
+  .container .account .big-box .profile-nav .link {
+    font-size: 2vw;
+    padding: 10px 20px;
+  }
+
+  .container .account .big-box .dashboard header {
+    font-size: 4vw;
+  }
+
+  .container .account .big-box .dashboard footer ,
+  .container .account .big-box .verify-email-message .message-mini {
+    font-size: 3vw;
+  }
+
+
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */
+/* ------------------------------------------ 350-start ------------------------------------------ */
+
+
+@media (max-width:350px) {}
+
+
+/* ------------------------------------------ 350-end ------------------------------------------ */

@@ -1,0 +1,766 @@
+.container .meeting {
+  width: 100%;
+  padding: var(--left-margin-2);
+  padding-left: calc(var(--left-margin) - 2px);
+  padding-right: 0;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+
+}
+
+
+.container .meeting .mini-intro {
+  width: 100%;
+  padding: var(--left-margin-3);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.container .meeting .mini-intro .title {
+  font-size: 5.5vw;
+  text-align: left;
+  width: 100%;
+  margin: -20px -5px 22px;
+  font-weight: 350;
+}
+
+.container .meeting .mini-intro .text {
+  width: 70%;
+  text-align: left;
+  font-size: 1.7vw;
+  margin: 10px 0;
+  font-weight: 350;
+
+}
+
+.container .meeting .mini-intro .text2 {
+  font-size: 2vw;
+  font-weight: 400;
+}
+
+.container .meeting .mini-contact {
+  width: 100%;
+  padding: 0 calc(var(--left-margin-2) * 2) 0 var(--left-margin-2);
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--color-dark-black-10);
+  border-top: 2px solid var(--color-dark-black-10);
+  overflow: hidden;
+
+}
+
+.container .meeting .mini-contact .left, .container .meeting .mini-contact .right {
+  padding: var(--left-margin-2) 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container .meeting .mini-contact .left {
+  border-right: 2px solid var(--color-dark-black-10);
+  text-align: left;
+}
+
+.container .meeting .mini-contact .lien,
+.container .meeting .mini-contact .title {
+  font-size: 1.4vw;
+  color: var(--color-dark-black-10);
+  font-weight: 350;
+  margin: 10px 0;
+}
+
+.container .meeting .mini-contact .lien {
+  color: var(--color-light-white-2);
+  position: relative;
+  padding-bottom: 10px;
+  overflow: hidden;
+
+}
+
+.container .meeting .mini-contact .lien::before {
+  content: '';
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-light-white-2);
+  transition: .5s ease-in-out;
+  transform: translateX(-101%);
+}
+
+.container .meeting .mini-contact .right .lien::before {
+  transform: translateX(101%);
+}
+
+.container .meeting .mini-contact .lien:hover:before {
+  transform: translateX(0);
+}
+
+
+.container .meeting .mini-contact .right {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.container .cal {
+  width: 100%;
+  padding: 8%;
+  padding-bottom: 0%;
+  font-weight: 350;
+
+}
+
+.container .cal .mini-text {
+  font-size: 1.4vw;
+  color: var(--color-dark-black-10);
+  font-weight: 350;
+  margin: 10px 0;
+}
+
+.container .cal .text {
+  font-size: 1.7vw;
+  font-weight: 350;
+  margin: 20px 0;
+  margin-bottom: var(--left-margin-2);
+  width: 70%;
+
+}
+
+.container .cal .title-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2vw;
+  padding-right: var(--left-margin-2);
+}
+
+.container .cal .return-btn {
+  font-size: 1.7vw;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-bottom: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 150px;
+  pointer-events: none;
+  color: var(--color-dark-black-10);
+  transition: .3s ease-in-out;
+}
+
+.container .cal .return-btn-after {
+  color: var(--color-light-white-2);
+  pointer-events: all;
+}
+
+.container .cal .return-btn .arrow {
+  transform: rotate(180deg);
+  margin-right: 20px;
+  display: flex;
+  font-size: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .cal .return-btn::before {
+  content: '';
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  height: 1px;
+  transition: .4s ease-in-out;
+  transform: translateX(101%);
+  background-color: var(--color-light-white-2);
+}
+
+.container .cal .return-btn:hover:before {
+  transform: translateX(0%);
+}
+
+.container .cal .pick-date-box {
+  width: 100%;
+  padding-right: var(--left-margin-2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  transition: .5s ease-in-out;
+}
+
+.container .cal .calender {
+  position: relative;
+  transition: .8s ease-in-out;
+  right: 0;
+  width: 100%;
+  height: max-content;
+}
+
+.container .cal .calender-after {
+  opacity: 0;
+  right: 101%;
+}
+
+.pick-date-box .react-calendar__tile {
+  padding: 20px 25px;
+  font-size: 1.2vw;
+  border-radius: 0;
+  border: 1px solid var(--color-dark-black-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: var(--color-dark-black-1); */
+  /* background-color: var(--color-dark-black-1); */
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.pick-date-box .react-calendar__tile:hover {
+  background-color: var(--color-dark-black-10);
+
+}
+
+.pick-date-box .react-calendar__month-view__weekdays__weekday {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-dark-black-10);
+  /* border: 1px solid var(--color-dark-black-1);   */
+}
+
+.pick-date-box abbr {
+  text-decoration: none;
+}
+
+/* react-calendar__tile react-calendar__month-view__days__day */
+/* react-calendar__tile react-calendar__month-view__days__day */
+
+.pick-date-box .react-calendar__month-view__days__day {
+  background-color: var(--color-dark-black-1);
+  color: var(--color-light-white-2);
+}
+
+.pick-date-box .react-calendar__tile--now {
+  background-color: var(--color-light-white-2);
+  color: var(--color-dark-black-1);
+}
+
+.pick-date-box .react-calendar__month-view__days__day--weekend {
+  color: var(--color-dark-black-10);
+  pointer-events: none;
+}
+
+.pick-date-box .react-calendar__month-view__days__day--weekend:hover {
+  color: var(--color-dark-black-10);
+  background-color: var(--color-dark-black-1);
+}
+
+.pick-date-box .react-calendar__month-view__days {
+  transform: translateY(-1px);
+}
+
+.pick-date-box .react-calendar__navigation {
+  width: 100%;
+  height: 130px;
+  background-color: var(--color-dark-black-2);
+  padding: 10px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+
+.pick-date-box .react-calendar__navigation__label {
+  height: 100%;
+  background-color: transparent;
+  color: var(--color-light-white-2);
+  font-size: 1.8vw;
+  border: none;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.pick-date-box .react-calendar__navigation__arrow {
+  font-size: 1.6vw;
+  background-color: transparent;
+  color: var(--color-light-white-2);
+  border: none;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease-in-out;
+}
+
+.pick-date-box .react-calendar__navigation__arrow::before {
+  content: '';
+  transition: .4s ease-in-out;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 90%;
+  background-color: var(--color-light-white-2);
+
+}
+
+.pick-date-box .react-calendar__navigation__arrow:hover:before {
+  width: 100%;
+}
+
+.pick-date-box .react-calendar__navigation button:disabled {
+  color: var(--color-dark-black-10);
+  pointer-events: none;
+}
+
+.pick-date-box .react-calendar__month-view__days button:disabled {
+  background-color: var(--color-dark-black-1);
+  color: var(--color-dark-black-1);
+  pointer-events: none;
+}
+
+.pick-date-box .react-calendar__month-view__days button:disabled:hover {
+  background-color: var(--color-dark-black-1);
+  color: var(--color-dark-black-1);
+}
+
+.container .meeting .cal .pick-date-box .dates {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  flex-direction: row;
+  padding: 0;
+  position: absolute;
+  padding-right: var(--left-margin-2);
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 100%;
+  right: 0;
+  opacity: 0;
+  transition: .8s ease-in-out;
+  height: max-content;
+}
+
+.container .meeting .cal .pick-date-box .dates-after {
+  left: 0;
+  opacity: 1;
+  transform: translateX(0%);
+  height: max-content;
+}
+
+.container .meeting .cal .pick-date-box .dates-after-2 {
+  transform: translateX(-101%);
+  opacity: 0;
+}
+
+.container .meeting .cal .pick-date-box .dates .date-box {
+  font-size: 1.3vw;
+  padding: 15px 30px;
+  color: var(--color-light-white-2);
+  margin: 20px;
+  border: solid 1px var(--color-dark-black-10);
+  transition: .3s ease-in-out;
+  cursor: pointer;
+
+}
+
+.container .meeting .cal .pick-date-box .dates .date-box:hover {
+  background-color: var(--color-dark-black-10);
+}
+
+.container .meeting .cal .pick-date-box .anwser {
+  width: 100%;
+  font-size: 2vw;
+  color: var(--color-dark-black-10);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  top: 10%;
+  left: 101%;
+  padding-right: var(--left-margin-2);
+  transition: .8s ease-in-out;
+  height: max-content;
+}
+
+.container .meeting .cal .pick-date-box .anwser-after {
+  left: 0;
+}
+
+.container .meeting .content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+  color: var(--color-dark-black-10);
+  position: absolute;
+  justify-content: flex-start;
+  align-items: center;
+  inset: 0;
+  left: 101%;
+  padding-right: var(--left-margin-2);
+  transition: .8s ease-in-out;
+  height: max-content;
+}
+
+.container .meeting .content .metting-form {
+  border: solid 1px var(--color-dark-black-8);
+  width: 60%;
+  padding: 70px;
+
+}
+
+.container .meeting .content .metting-form .data {
+  width: 100%;
+  color: var(--color-light-white-2);
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2vw;
+  background-color: var(--color-dark-black-9);
+}
+
+
+.container .meeting .content .metting-form form {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+.container .meeting .content .metting-form form .input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+
+.container .meeting .content .metting-form form .input-box .label {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.4vw;
+}
+
+.container .meeting .content .metting-form form .input-box input {
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  height: 70px;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: solid 1px var(--color-dark-black-10);
+  transition: .3s ease-in-out;
+  font-size: 1.3vw;
+  color: var(--color-light-white-2);
+}
+
+.container .meeting .content .metting-form form .input-box input::placeholder {
+  color: var(--color-dark-black-8);
+  transition: .4s ease-in-out;
+}
+
+.container .meeting .content .metting-form form .input-box input:hover {
+  border: var(--color-light-white-2) solid 1px;
+
+}
+
+.container .meeting .content .metting-form form .input-box input:focus::placeholder {
+  color: transparent;
+}
+
+.container .meeting .content .metting-form form .input-box input:focus {
+  outline: none;
+  border: var(--color-light-white-2) solid 1px;
+}
+
+
+
+.container .meeting .content .metting-form form .meeting-btn {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 50px 0 20px 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light-white-2);
+
+}
+
+.container .meeting .content .metting-form form .meeting-btn .btn-prm {
+  font-size: 1.3vw;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-dark-black-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: .5s ease-in-out;
+  width: 100%;
+
+}
+
+.container .meeting .content .metting-form form .meeting-btn .btn-prm .arrow-right {
+  font-size: 2.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  margin-left: 60px;
+  transition: .5s ease-in-out;
+
+}
+
+.container .meeting .content .metting-form form .meeting-btn .btn-prm:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  top: 100%;
+  background-color: var(--color-light-white-2);
+  transition: .5s ease-in-out;
+}
+
+.container .meeting .content .metting-form form .meeting-btn .btn-prm:hover:before {
+  width: 100%;
+}
+
+.container .meeting .content .metting-form form .meeting-btn:focus {
+  outline: none;
+}
+
+.container .meeting .content .metting-form form .input-box .validate {
+  font-size: .9vw;
+  color: var(--color-light-red-1);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-weight: 500;
+  position: absolute;
+  top: 100%;
+}
+
+.container .meeting .content .metting-form form .input-box .validate .sym {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+}
+
+.container .meeting .content .metting-form form .error-box {
+  padding: 20px 30px;
+  border-radius: 5px;
+  position: fixed;
+  width: max-content;
+  height: max-content;
+  font-size: 1.5vw;
+  background-color: var(--color-dark-red-1);
+  color: var(--color-light-red-3);
+  inset: 0;
+  z-index: 10;
+  text-align: center;
+  margin-left: calc(var(--left-margin-2) * 2);
+  top: 110%;
+  display: block;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.container .meeting .content .metting-form form .error-box.error-box-hidden {
+  top: 85%;
+  opacity: 1;
+}
+
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .meeting .mini-intro .title {
+    font-size: 7vw;
+  }
+
+  .container .meeting .mini-intro .text,
+  .container .meeting .mini-contact .lien,
+  .container .meeting,
+  .container .meeting .mini-contact .lien,
+  .container .meeting .mini-contact .title,
+  .container .cal .text,
+  .container .cal .return-btn,
+  .pick-date-box .react-calendar__navigation__label,
+  .container .meeting .content .metting-form .data,
+  .pick-date-box .react-calendar__navigation__arrow,
+  .container .meeting .content .metting-form form .input-box input::placeholder,
+  .container .meeting .content .metting-form form .meeting-btn .btn-prm,
+  .container .meeting .content .metting-form form .input-box input {
+    font-size: 2.5vw;
+  }
+
+  .container .cal .mini-text,
+  .container .meeting .cal .pick-date-box .dates .date-box {
+    font-size: 2vw;
+  }
+
+  .container .cal .title-bar {
+    font-size: 3.5vw;
+    padding-right: 0;
+  }
+
+  .container .cal .pick-date-box {
+    padding-right: 0;
+  }
+
+  .pick-date-box .react-calendar__tile {
+    font-size: 1.5vw;
+  }
+
+  .container .meeting .cal .pick-date-box .dates-after {
+    padding-right: 0;
+  }
+
+  .container .meeting .cal .pick-date-box .anwser-after {
+    padding-right: 0;
+
+  }
+
+  .container .meeting .content .metting-form .data {
+    padding: 70px 50px;
+  }
+
+  .container .meeting .content .metting-form {
+    width: 70%;
+  }
+
+  .container .meeting .content .metting-form form .meeting-btn .btn-prm .arrow-right {
+    font-size: 4vw;
+  }
+
+  .container .cal .return-btn {
+    margin: 40px 0;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  .container .meeting .mini-intro {
+    padding: 70px;
+  }
+
+  .container .meeting .mini-intro .title {
+    font-size: 10vw;
+  }
+
+  .container .meeting .mini-intro .text {
+    width: 100%;
+  }
+
+  .container .meeting .mini-contact {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container .meeting .mini-contact .left,
+  .container .meeting .mini-contact .right {
+    width: 100%;
+    height: auto;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .meeting .mini-contact .left {
+    border-bottom: 2px solid var(--color-dark-black-10);
+  }
+
+
+  .container .meeting .mini-intro .text,
+  .container .meeting .mini-contact .lien,
+  .container .meeting,
+  .container .meeting .mini-contact .lien,
+  .container .meeting .mini-contact .title,
+  .container .cal .text,
+  .container .cal .return-btn,
+  .pick-date-box .react-calendar__navigation__label,
+  .container .meeting .content .metting-form .data,
+  .pick-date-box .react-calendar__navigation__arrow,
+  .container .meeting .content .metting-form form .input-box input::placeholder,
+  .container .meeting .content .metting-form form .meeting-btn .btn-prm,
+  .container .meeting .content .metting-form form .input-box input {
+    font-size: 4vw;
+  }
+
+  .container .cal .mini-text,
+  .container .meeting .cal .pick-date-box .dates .date-box {
+    font-size: 3vw;
+  }
+
+  .container .cal .title-bar {
+    font-size: 7vw;
+    padding-right: 0;
+  }
+  .pick-date-box .react-calendar__navigation{
+    height: 70px;
+  }
+
+  .pick-date-box .react-calendar__tile {
+    font-size: 3.5vw;
+    padding: 3.5vw;
+  }
+
+  .container .meeting .content .metting-form .data {
+    padding:  40px;
+  }
+
+  .container .meeting .content .metting-form {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .container .meeting .content .metting-form form .meeting-btn .btn-prm .arrow-right ,
+  .container .cal .return-btn .arrow{
+
+    font-size: 4vw;
+  }
+  .container .meeting .content .metting-form form .input-box input{
+    height: 50px;
+  }
+  .container .cal .return-btn {
+    margin: 40px auto;
+    width: 100px;
+  }
+
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */

@@ -1,0 +1,206 @@
+.container .profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+  font-weight: 350;
+  font-size: 1.3vw;
+  margin: 50px 0;
+}
+
+.container .account .big-box .profile form {
+  padding: 0;
+}
+
+.container .account .big-box .profile form .input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.container .account .big-box .profile form .input-box .label {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.4vw;
+}
+
+.container .account .big-box .profile form .input-box input {
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  height: 4.5vw;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: solid 1px var(--color-dark-black-10);
+  transition: .3s ease-in-out;
+  font-size: 1.2vw;
+  color: var(--color-light-white-2);
+}
+
+.container .account .big-box .profile form .input-box input:hover {
+  border: var(--color-light-white-2) solid 1px;
+
+}
+
+.container .account .big-box .profile form .input-box input:focus {
+  outline: none;
+  border: var(--color-light-white-2) solid 1px;
+}
+
+.container .account .big-box .profile form .input-box .hidden-show {
+  position: absolute;
+  inset: 0;
+   /* transform: translateY(5.3vw); */
+  z-index: 2;
+  left: 100%;
+  margin-left: -4vw;
+  top: 60%;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5vw;
+  width: 2vw;
+  cursor: pointer;
+}
+
+.container .account .big-box .profile form .input-box .show {
+  color: var(--color-light-white-4);
+}
+
+.container .account .big-box .profile .register-message .account-btn,
+.container .account .big-box .profile form .account-btn{
+  color: var(--color-light-white-2);
+  width: max-content;
+}
+
+.container .account .big-box .profile form .input-box .validate {
+  font-size: .9vw;
+  color: var(--color-light-red-1);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-weight: 500;
+  position: absolute;
+  top: 100%;
+}
+
+.container .account .big-box .profile form .input-box .validate .sym {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+}
+
+.container .account .big-box .profile .error-box {
+  padding: 20px;
+  font-size: 1.5vw;
+  background-color: var(--color-dark-black-10);
+  color: var(--color-light-white-2);
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+.container .account .big-box .profile .error-box.error-box-hidden{
+  display: block;
+  overflow: hidden;
+}
+
+.container .account .big-box .profile .reg-error-box{
+  width: 100%;
+  padding: 23px 30px ;
+  margin-bottom: 30px;
+  font-size: 1.2vw;
+  background-color: var(--color-dark-red-1);
+  color: var(--color-light-red-3);
+  font-weight: 500;
+  display: none;
+}
+.container .account .big-box .profile .show-reg-error-box{
+  display: block;
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* style for register form */
+
+.container .account .big-box .profile .register-message{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+  font-weight: 350;
+  font-size: 1.3vw;
+  margin: 50px 0;
+}
+.container .account .big-box .profile .register-message .reg-form-title{
+  font-size: 6vw;
+}
+.container .account .big-box .profile .register-message .reg-form-title-mini{
+  font-size: 1vw;
+  color: var(--color-light-white-5);
+  font-weight: 300;
+}
+.container .account .big-box .profile .register-message .account-btn{
+  margin-top: 50px ; 
+}
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .account .big-box .profile form .input-box .label,
+  .container .account .big-box .profile .error-box{
+    font-size: 2.5vw;
+  }
+  .container .account .big-box .profile form .input-box input{
+    height: 6vw;
+    font-size: 2vw;
+  }
+  .container .account .big-box .profile form .input-box .hidden-show{
+    font-size: 2vw;
+    top: 65%;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  .container .account .big-box .profile form .input-box .label,
+  .container .account .big-box .profile .error-box{
+    font-size: 3.5vw;
+  }
+  .container .account .big-box .profile form .input-box input{
+    height: 11vw;
+    font-size: 3.5vw;
+  }
+  .container .account .big-box .profile form .input-box .hidden-show{
+    top: 67%;
+    margin-left: -7vw;
+  }
+
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */

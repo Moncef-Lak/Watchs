@@ -1,0 +1,699 @@
+.container .watch-details, .container .watch-details .intro-for-watch {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .watch-details .intro-for-watch .top {
+  width: 100%;
+  height: 643px;
+  padding: var(--left-margin-2);
+  padding-bottom: 0;
+  color: var(--color-light-white-2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .watch-details .intro-for-watch .top .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: calc(var(--left-margin-2) * -1);
+  margin-bottom: 0;
+
+}
+
+.container .watch-details .intro-for-watch .top .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container .watch-details .intro-for-watch .top .watch-title {
+  padding-left: var(--left-margin-2);
+  font-size: 5.5vw;
+  font-weight: 350;
+  width: 100%;
+  text-align: left;
+  z-index: 2;
+
+}
+
+.container .watch-details .intro-for-watch .top .btn-showing {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  margin-top: 70px;
+  padding-right: 70px;
+  z-index: 2;
+}
+
+.container .watch-details .intro-for-watch .top .btn-showing .btn-prm {
+  font-size: 1.5vw;
+  margin: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-dark-black-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+}
+
+
+.container .watch-details .intro-for-watch .top .btn-showing .btn-prm .arrow-right {
+  font-size: 2.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  margin-left: 60px;
+  transition: .5s ease-in-out;
+
+}
+
+.container .watch-details .intro-for-watch .top .btn-showing .btn-prm:hover .arrow-right {
+  margin-left: 100px;
+}
+
+.container .watch-details .intro-for-watch .top .btn-showing .btn-prm:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  inset: 0;
+  top: 100%;
+  background-color: var(--color-light-white-2);
+  transition: .5s ease-in-out;
+  transform-origin: right;
+}
+
+.container .watch-details .intro-for-watch .top .btn-showing .btn-prm:hover:before {
+  width: 100%;
+}
+
+.container .watch-details .intro-for-watch .bottom {
+  width: 100%;
+  background-color: var(--color-light-white-2);
+  min-height: 750px;
+  margin-top: 1px;
+  padding: 50px var(--left-margin-2);
+  margin-left: var(--left-margin-2);
+  padding-left: 0;
+  color: var(--color-dark-black-1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1.5px solid var(--color-dark-black-10);
+}
+
+.container .watch-details .intro-for-watch .bottom .left {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.container .watch-details .intro-for-watch .bottom .left img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .watch-details .intro-for-watch .bottom .left .price {
+  font-size: 2vw;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .watch-details .intro-for-watch .bottom .right {
+  width: 60%;
+  overflow: hidden;
+  padding-left: 50px;
+  padding-right: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 90%;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .category-title {
+  font-size: 1vw;
+  color: var(--color-dark-black-8);
+  margin: 10px 0;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .watch-title {
+  font-size: 3.5vw;
+  margin: 10px 0;
+  line-height: 90px;
+  padding: 0;
+  font-weight: 350;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .descrption {
+  font-size: 1.5vw;
+  margin: 10px 0;
+  margin-top: 40px;
+
+}
+
+.container .watch-details .intro-for-watch .bottom .right .detail {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .descrption-detail {
+  margin: 10px 0;
+  margin-top: 40px;
+  color: var(--color-light-gray-3);
+  font-weight: 350;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .buy-btn {
+  background-color: var(--color-dark-black-1);
+  color: var(--color-light-white-2);
+  padding: 10px 35px;
+  border: 2px transparent solid;
+  transition: .4s ease-in-out;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 350;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .buy-btn:hover {
+  background-color: var(--color-light-white-2);
+  color: var(--color-dark-black-1);
+  border: 2px var(--color-dark-black-1) solid;
+}
+
+.container .watch-details .intro-for-watch .bottom .right .buy-btn .text {
+  margin: 0 10px;
+  font-size: 1.5vw;
+
+}
+
+.container .watch-details .intro-for-watch .bottom .right .buy-btn .arrow {
+  margin-left: 20px;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .watch-details .intro-for-watch .end {
+  width: 100%;
+  padding: 30px 0;
+  background-color: var(--color-light-white-2);
+  margin-left: var(--left-margin-2);
+  padding-right: var(--left-margin-2);
+  color: var(--color-dark-black-1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container .watch-details .intro-for-watch .end .srvc {
+  font-weight: 400;
+}
+
+.container .watch-details .pictures {
+  width: 100%;
+  padding: var(--left-margin-2) 0 var(--left-margin-2) var(--left-margin-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+}
+
+.container .watch-details .pictures .mini-title {
+  font-size: 1.1vw;
+  margin-bottom: 10px;
+  width: 60%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container .watch-details .pictures .text {
+  width: 70%;
+  margin: 10px;
+  font-size: 4vw;
+  font-weight: 350;
+  text-align: center;
+  line-height: 75px;
+}
+
+.container .watch-details .pictures .photo-controller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  margin: 50px 0;
+  height: 550px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .watch-details .pictures .photo-controller .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.container .watch-details .pictures .photo-controller .left-arrow,
+.container .watch-details .pictures .photo-controller .right-arrow {
+  width: 12.5%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  cursor: pointer;
+
+}
+
+.container .watch-details .pictures .photo-controller img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .watch-details .pictures .photo-controller .left-arrow {
+  transform: rotate(180deg);
+
+}
+
+.container .watch-details .pictures .photo-controller .count {
+  position: absolute;
+  left: 95%;
+  top: 94%;
+  transform: rotate(90deg);
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+
+.container .watch-details .watchs-same-category {
+  width: 100%;
+  overflow: hidden;
+  padding-left: var(--left-margin-2);
+}
+
+.container .watch-details .watchs-same-category .category-title {
+  font-size: 6vw;
+  width: 100%;
+  text-align: left;
+  font-weight: 350;
+  padding: 40px 0 40px var(--left-margin-2);
+  border-top: 2px solid var(--color-dark-black-10);
+  border-bottom: 2px solid var(--color-dark-black-10);
+  color: var(--color-light-white-2);
+}
+
+.container .watch-details .watchs-same-category .all-watchs {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box {
+  width: 350px;
+  height: 550px;
+  /* padding: 10px; */
+  margin: 50px 0;
+  background-color: var(--color-light-white-2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box .title {
+  padding: 20px;
+  color: var(--color-dark-black-1);
+  font-size: 1.25vw;
+  width: 100%;
+  text-align: center;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box img {
+  object-fit: cover;
+  transition: .5s;
+  width: 90%;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box .price {
+  padding: 20px;
+  color: var(--color-dark-black-12);
+  font-size: 1vw;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box .back-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  transition: .5s;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box .back-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box:hover .back-img {
+  z-index: 1;
+  opacity: 1;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .watchs-slider .watch-box:hover img {
+  transform: scale(1.1);
+}
+
+.container .watch-details .watchs-same-category .all-watchs .left-arrow,
+.container .watch-details .watchs-same-category .all-watchs .right-arrow {
+  padding: 50px 10px;
+  display: flex;
+  margin: 0 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  color: var(--color-light-white-2);
+  background-color: transparent;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.container .watch-details .watchs-same-category .all-watchs .left-arrow {
+  transform: rotate(180deg);
+}
+
+.container .watch-details .watchs-same-category .all-watchs .left-arrow:hover,
+.container .watch-details .watchs-same-category .all-watchs .right-arrow:hover {
+  background-color: var(--color-light-white-2);
+  color: var(--color-dark-black-1);
+}
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+
+
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .watch-details .intro-for-watch .top .btn-showing .btn-prm {
+    font-size: 2.5vw;
+  }
+
+  .container .watch-details .intro-for-watch .top .watch-title {
+    font-size: 7vw;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .container .watch-details .intro-for-watch .top .btn-showing {
+    justify-content: center;
+    padding: 0;
+  }
+
+
+  .container .watch-details .intro-for-watch .bottom {
+    margin: 0;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .category-title {
+    font-size: 1.5vw;
+  }
+
+  .container .watch-details .intro-for-watch .end {
+    margin: 0;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .container .watch-details .intro-for-watch .end .srvc {
+    font-size: 1.8vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right {
+    width: 70%;
+    padding: 0 50px;
+  }
+
+
+  .container .watch-details .intro-for-watch .bottom .right .watch-title {
+    line-height: 20px;
+  }
+
+  .container .watch-details .pictures {
+    padding: var(--left-margin-2) 0;
+  }
+
+
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  .container .watch-details .intro-for-watch .top .btn-showing .btn-prm .arrow-right {
+    font-size: 5vw;
+  }
+
+  .container .watch-details .intro-for-watch .top .watch-title {
+    font-size: 10vw;
+  }
+
+  .container .watch-details .intro-for-watch .top .btn-showing .btn-prm {
+    font-size: 4vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom {
+    padding: 50px 20px;
+    overflow: visible;
+    flex-direction: column;
+
+  }
+
+  .container .watch-details .intro-for-watch .bottom .left {
+    position: relative;
+    background-color: transparent;
+    width: 80%;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .left img {
+    border-radius: 10px;
+    border-radius: 100%;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .left .price {
+    font-size: 4vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .descrption {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .watch-title {
+    font-size: 6vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .detail {
+    text-align: center;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .category-title {
+    font-size: 3vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .descrption-detail {
+    text-align: center;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .buy-btn .text {
+    font-size: 4vw;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right .buy-btn .arrow {
+    font-size: 5vw;
+  }
+
+  .container .watch-details .intro-for-watch .end {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .watch-details .intro-for-watch .end .srvc {
+    font-size: 4vw;
+    margin: 10px 0;
+  }
+
+  .container .watch-details .pictures .mini-title {
+    font-size: 2.5vw;
+  }
+
+  .container .watch-details .pictures .text {
+    font-size: 6vw;
+    line-height: 40px;
+  }
+
+  .container .watch-details .pictures .photo-controller .left-arrow,
+  .container .watch-details .pictures .photo-controller .right-arrow {
+    width: 40%;
+    font-size: 7vw;
+    padding: 15px;
+  }
+
+  .container .watch-details .pictures .photo-controller {
+    flex-direction: column;
+  }
+
+  .container .watch-details .pictures .photo-controller .left-arrow {
+    order: 1;
+  }
+
+  .container .watch-details .pictures .photo-controller .swiper {
+    width: 90%;
+    order: 1;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .container .watch-details .pictures .photo-controller .left-arrow {
+    order: 2;
+  }
+
+  .container .watch-details .pictures .photo-controller .right-arrow {
+    order: 3;
+
+  }
+
+  .container .watch-details .pictures .photo-controller .count {
+    font-size: 5vw;
+    transform: none;
+    position: relative;
+    inset: auto;
+    order: 4;
+    color: var(--color-light-gray-3);
+    transform: translateY(20px);
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right {
+    width: 80%;
+    padding: 0;
+  }
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */
+/* ------------------------------------------ 350-start ------------------------------------------ */
+
+
+@media (max-width:350px) {
+  .container .watch-details .intro-for-watch .bottom .left img {
+    width: 100%;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .left {
+    width: 90%;
+  }
+
+  .container .watch-details .intro-for-watch .bottom .right {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+
+/* ------------------------------------------ 350-end ------------------------------------------ */

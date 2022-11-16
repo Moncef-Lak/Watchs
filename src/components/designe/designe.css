@@ -1,0 +1,24 @@
+.button-one{
+  font-size: 1.3vw; 
+  white-space: nowrap;
+  padding:  5px 20px;
+  margin: 0 20px;
+  position: relative;
+  overflow: hidden;  
+  transition: .5s ease-in-out;
+}
+.button-one:before{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-light-white-2);
+  top: 80%;
+  position: absolute;
+  transform: translateX(-100%) translateY(5px);
+  transition: .5s ease-in-out;
+
+}
+.button-one{
+  transform: translateX(0%) translateY(5px);
+
+}

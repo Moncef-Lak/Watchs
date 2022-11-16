@@ -1,0 +1,184 @@
+.container .trend {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .trend .more-watchs {
+  width: 100%;
+  overflow: hidden;
+  padding-left: calc(var(--left-margin) - 2px);
+}
+
+.container .trend .more-watchs .category-title {
+  font-size: 6vw;
+  width: 100%;
+  text-align: left;
+  font-weight: 350;
+  padding: 40px 0 40px var(--left-margin-2);
+  border-top: 2px solid var(--color-dark-black-10);
+  border-bottom: 2px solid var(--color-dark-black-10);
+  color: var(--color-light-white-2);
+}
+
+.container .trend .more-watchs .all-watchs {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  /* inset: 0; */
+  /* transform: translateX(30%); */
+  /* left: 20%; */
+  transition: .5s ease-in-out;
+  overflow: hidden;
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box {
+  width: 330px;
+  height: 520px;
+  /* padding: 10px; */
+  margin: 50px 10px;
+  background-color: var(--color-light-white-2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box .title {
+  padding: 20px;
+  color: var(--color-dark-black-1);
+  font-size: 1.25vw;
+  width: 100%;
+  text-align: center;
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box img {
+  object-fit: cover;
+  transition: .5s;
+  width: 90%;
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box .price {
+  padding: 20px;
+  color: var(--color-dark-black-12);
+  font-size: 1vw;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box:hover {
+  transform: scale(.93);
+}
+
+.container .trend .more-watchs .all-watchs .watchs-slider .watch-box:hover img {
+  transform: scale(1.25);
+}
+
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+
+/* ------------------------------------------ 1024-start ------------------------------------------ */
+
+
+@media (max-width:1025px) {
+  .container .trend .more-watchs .all-watchs{
+    padding: 50px;
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box{
+    height: 75vh;
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box{
+    margin: 0 10px;
+  }
+}
+
+/* ------------------------------------------ 1024-end ------------------------------------------ */
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .trend .more-watchs .all-watchs{
+    padding: 50px;
+  }
+  
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box{
+    margin: 0 10px;
+    height: 60vh;
+  }
+  
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box .title{
+    font-size: 2vw;
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box .price{
+    font-size: 1.5vw;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box{
+    height: 70vh;
+    margin: 20px 0 ;
+    width: 80%;
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider{
+    flex-direction: column;
+
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box .title{
+    font-size: 5vw;
+  }
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box .price{
+    font-size: 3.5vw;
+  }
+  .container .trend .more-watchs .category-title{
+    font-size: 10vw;
+  }
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */
+/* ------------------------------------------ 350-start ------------------------------------------ */
+
+
+@media (max-width:350px) {
+  .container .trend .more-watchs .all-watchs .watchs-slider .watch-box{
+    height: 55vh;
+    width: 90%;
+  }
+}
+
+
+/* ------------------------------------------ 350-end ------------------------------------------ */

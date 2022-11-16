@@ -1,3 +1,96 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-dark-black-1: #1a1a1a;
+  --color-dark-black-2: #272727;
+  --color-dark-black-3: #1a1a1a80;
+  --color-dark-black-4: #27272741;
+  --color-dark-black-5: #333;
+  --color-dark-black-6: #313131;
+  --color-dark-black-7: #111111b3;
+  --color-dark-black-8: #414141;
+  --color-dark-black-9: #41414166;
+  --color-dark-black-10: #464646;
+  --color-dark-black-11: #474747;
+  --color-dark-black-12: #5e5e5e;
+
+  --color-dark-red-1: #320202a6;
+
+  --color-light-white-1: #fff;
+  --color-light-white-2: #f1f1f1;
+  --color-light-white-3: #f1f1f14b;
+  --color-light-white-4: #f1f1f17a;
+  --color-light-white-5: #f1f1f199;
+  --color-light-white-6: #ffffffb5;
+
+  --color-light-gray-1: #7d7d7d;
+  --color-light-gray-2: #a5a5a5;
+  --color-light-gray-3: #a0a0a0;
+  --color-light-gray-4: #aaa;
+
+  --color-light-opacity-gray-1: #7d7d7d2d;
+
+  --color-light-red-1: #f0485e;
+  --color-light-red-2: #e95656;
+  --color-light-red-3: #ff6767;
+
+  --left-margin: 112px;
+  --left-margin-2: 112px;
+  --left-margin-3: 112px;
+}
+
+[data-theme="light"] {
+  --color-dark-black-1: #f1f1f1;
+  --color-dark-black-2: #d8d8d8;
+  --color-dark-black-3: #e5e5e580;
+  --color-dark-black-4: #d8d8d841;
+  --color-dark-black-5: #cccccc;
+  --color-dark-black-6: #cecece;
+  --color-dark-black-7: #444444b3;
+  --color-dark-black-8: #bebebe;
+  --color-dark-black-9: #bebebe66;
+  --color-dark-black-10: #b9b9b9;
+  --color-dark-black-11: #b8b8b8;
+  --color-dark-black-12: #a1a1a1;
+
+  --color-dark-red-1: #fdcdcda6;
+
+  --color-light-white-1: #444;
+  --color-light-white-2: #555;
+  --color-light-white-3: #5555554b;
+  --color-light-white-4: #5555557a;
+  --color-light-white-5: #55555599;
+  --color-light-white-6: #444444b5;
+  --color-light-gray-1: #7d7d7d;
+  --color-light-gray-2: #5a5a5a;
+  --color-light-gray-3: #8a8a8a;
+  --color-light-gray-4: #555555;
+
+  --color-light-opacity-gray-1: #8282822d;
+
+  --color-light-red-1: #b70f0f;
+  --color-light-red-2: #ff6767;
+  --color-light-red-3: #980000;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light-white-2);
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +100,222 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* perspective: 1000px; */
+  background-color: var(--color-dark-black-1);
+  overflow: hidden;
+  transition: .5s ease-in-out;
 }
+
+.hidden-scroll {
+  overflow: hidden;
+}
+
+.container .line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-dark-black-8);
+  margin-left: calc(var(--left-margin) - 2px);
+}
+
+.container .line-2 {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark-black-8);
+}
+
+
+.container .for-loading {
+  width: 100%;
+  height: calc(100vh - var(--left-margin-2));
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.container .loader {
+  width: 20vw;
+  max-height: 90vh;
+  transform-origin: 50% 50%;
+  overflow: visible;
+  transform: scale(.8);
+}
+
+.container .ci1 {
+  fill: var(--color-dark-black-1);
+  animation: toBig 3s infinite -1.5s;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.container .ciw {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: breath 3s infinite;
+}
+
+.container .ci2 {
+  fill: var(--color-dark-black-1);
+  animation: toBig2 3s infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+
+}
+
+.container .points {
+  animation: rot 3s infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  80% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+
+@keyframes toBig {
+  0% {
+    transform: scale(1) translateX(0px);
+  }
+
+  30% {
+    transform: scale(1) translateX(0px);
+  }
+
+  50% {
+    transform: scale(10) translateX(-4.5px);
+  }
+
+  80% {
+    transform: scale(10) translateX(-4.5px);
+  }
+
+  100% {
+    transform: scale(1) translateX(0px);
+  }
+
+}
+
+@keyframes toBig2 {
+  0% {
+    transform: scale(1) translateX(0px);
+  }
+
+  30% {
+    transform: scale(1) translateX(0px);
+  }
+
+  50% {
+    transform: scale(10) translateX(4.5px);
+  }
+
+  80% {
+    transform: scale(10) translateX(4.5px);
+  }
+
+  100% {
+    transform: scale(1) translateX(0px);
+  }
+}
+
+@keyframes breath {
+  15% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.1);
+  }
+
+  65% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1.1);
+  }
+
+}
+
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+
+/* ------------------------------------------ 1024-start ------------------------------------------ */
+
+
+@media (max-width:1025px) {
+
+  :root {
+    --left-margin: 80px;
+    --left-margin-2: 80px;
+    --left-margin-3: 80px;
+  }
+
+}
+
+/* ------------------------------------------ 1024-end ------------------------------------------ */
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  :root {
+    --left-margin: 0;
+    --left-margin-2: 70px;
+    --left-margin-3: 70px;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  :root {
+    --left-margin: 0;
+    --left-margin-2: 80px;
+    --left-margin-3: 40px;
+  }
+  .container .watchs .for-loading .loader {
+    transform: scale(1.1);
+  }
+}
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */
+/* ------------------------------------------ 350-start ------------------------------------------ */
+
+
+@media (max-width:350px) {}
+
+
+/* ------------------------------------------ 350-end ------------------------------------------ */

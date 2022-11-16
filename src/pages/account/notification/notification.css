@@ -1,0 +1,165 @@
+.container .notification {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-light-white-2);
+  overflow: hidden;
+  font-weight: 350;
+  font-size: 1.3vw;
+  margin: 50px 0;
+}
+
+
+.container .notification .notification-box {
+  width: 100%;
+  position: relative;
+  padding: 15px 50px;
+  font-size: 1.2vw;
+  color: var(--color-light-white-2);
+  background-color: var(--color-dark-black-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.container .notification .notification-box:first-child {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.container .notification .notification-box .sym {
+  font-size: 3vw;
+  width: 10%;
+  height: 100%;
+  color: var(--color-light-white-2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container .notification .notification-box .text {
+  width: 90%;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 20px;
+  font-size: 1vw;
+  position: relative;
+}
+
+.container .notification .notification-box .text .notify-title {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.container .notification .notification-box .hidden-notification {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+  background-color: var(--color-dark-black-7);
+  transition: .5s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.container .notification .notification-box .text .date {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  color: var(--color-light-white-5);
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.container .notification .notification-box:hover .hidden-notification {
+  z-index: 2;
+  opacity: 1;
+}
+
+.container .notification .notice {
+  color: var(--color-light-white-5);
+  font-size: 1vw;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+/* ------------------------------------------ Media ------------------------------------------ */
+
+
+/* ------------------------------------------ 800-start ------------------------------------------ */
+
+
+@media (max-width:800px) {
+  .container .notification .notice {
+    font-size: 1.5vw;
+  }
+
+  .container .notification .notification-box {
+    padding: 20px 50px;
+  }
+
+  .container .notification .notification-box .text .notify-title {
+    font-size: 2vw;
+  }
+
+  .container .notification .notification-box .text {
+    font-size: 1.5vw;
+  }
+
+  .container .notification .notification-box .sym {
+    font-size: 5vw;
+  }
+}
+
+
+/* ------------------------------------------ 800-end ------------------------------------------ */
+/* ------------------------------------------ 460-start ------------------------------------------ */
+
+
+@media (max-width:460px) {
+  .container .notification .notice {
+    font-size: 2.5vw;
+  }
+
+  .container .notification .notification-box {
+    padding: 15px 20px;
+    overflow: visible;
+  }
+
+  .container .notification .notification-box .text .notify-title {
+    font-size: 3vw;
+  }
+
+  .container .notification .notification-box .text {
+    font-size: 2.5vw;
+  }
+
+  .container .notification .notification-box .sym {
+    font-size: 7vw;
+  }
+  .container .notification .notification-box .text .date{
+    transform: translateY(7vw);
+  }
+}
+
+
+
+/* ------------------------------------------ 460-end ------------------------------------------ */
