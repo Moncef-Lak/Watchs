@@ -28,7 +28,7 @@ const Account = () => {
             { withCredentials: true }
           )
           .then((data) => {
-            console.log(data.data);
+            // console.log(data.data);
             if (!data.data.status) {
               console.log("Failed to resend email");
             }
