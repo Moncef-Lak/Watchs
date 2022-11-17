@@ -15,10 +15,7 @@ const Watchs = () => {
   useEffect(() => {
     document.title = "STORE";
     const data = new FormData();
-    data.append(
-      "api_password",
-      "sskPTvYSaTYacyDRwbwnWqc1KN1g7frlq03IcCvyQ58gWFUo"
-    );
+    data.append("api_password", process.env.REACT_APP_API_PASSWORD);
     try {
       axios
         .post(process.env.REACT_APP_BASE_API_URL + "api/getAllProducts", data)
