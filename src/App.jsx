@@ -39,8 +39,16 @@ function App() {
       "font-weight: bold; font-size: 20px;background: linear-gradient(45deg,#bdc3c7,#2c3e50);color:#fff;margin: 1rem; padding: 3.5%"
     );
     console.log(
-      "%c https://www.linkedin.com/in/moncef-lakehal-198020204/",
+      "%c My Linkedin https://www.linkedin.com/in/moncefdev/",
       "font-weight: bold; font-size: 20px;background: linear-gradient(45deg,#0a66c2,#ddd);color:#fff;margin: 1rem; padding: 3.5%"
+    );
+    console.log(
+      "%c My GitHub https://github.com/MoncefDeveloper",
+      "font-weight: bold; font-size: 20px;background: linear-gradient(45deg,#f05133,#fff);color:#fff;margin: 1rem; padding: 3.5%"
+    );
+    console.log(
+      "%c My website https://moncefdev.site",
+      "font-weight: bold; font-size: 20px;background: linear-gradient(45deg,#159,#f59);color:#fff;margin: 1rem; padding: 3.5%"
     );
   }, []);
   return (
